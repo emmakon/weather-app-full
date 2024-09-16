@@ -6,31 +6,48 @@
     <title>Weather App</title>
   </head>
   <body>
-    <form>
-      <input type="search" placeholder="Enter a City" autofocus />
-      <input type="submit" value="Search" name="search" id="search-button" />
-    </form>
-    <hr />
-    <h1>Paris</h1>
-    <p>
-      Monday 11:57, broken clouds<br />Humidity<span
-        id="humidity"
-        class="humidity-wind"
-      >
-        87%</span
-      >, Wind: <span id="wind" class="humidity-wind">6.17km/h</span>
-    </p>
-    <p>☀️14°C</p>
-    <hr />
-    <footer>
-      Coded by
-      <a href="https://github.com/emmakon" target="_blank">Emma Konrad</a>, and
-      is open-sourced on
-      <a href="https://github.com/emmakon/weather-app-full" target="_blank"
-        >Github</a
-      >
-      and hosted on
-      <a href="https://weatherapp-full.netlify.app/" target="_blank">Netlify</a>
-    </footer>
+    <section>
+      <header>
+        <form>
+          <input type="search" placeholder="Enter a City" required autofocus />
+          <input
+            type="submit"
+            value="Search"
+            name="search"
+            id="search-button"
+          />
+        </form>
+        <hr />
+      </header>
+      <main>
+        <div>
+          <h1>Paris</h1>
+          <p>
+            Monday 11:57, broken clouds<br />Humidity<span
+              id="humidity"
+              class="humidity-wind"
+            >
+              87%</span
+            >, Wind: <span id="wind" class="humidity-wind">6.17km/h</span>
+          </p>
+        </div>
+        <div>
+          <p>☀️14°C</p>
+        </div>
+        <hr />
+      </main>
+      <footer>
+        Coded by
+        <a href="https://github.com/emmakon" target="_blank">Emma Konrad</a>,
+        and is open-sourced on
+        <a href="https://github.com/emmakon/weather-app-full" target="_blank"
+          >Github</a
+        >
+        and hosted on
+        <a href="https://weatherapp-full.netlify.app/" target="_blank"
+          >Netlify</a
+        >
+      </footer>
+    </section>
   </body>
 </html>
