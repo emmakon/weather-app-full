@@ -34,8 +34,8 @@ function displayDate(date) {
   todayDate.innerHTML = `${day} ${hour}:${minutes}`;
 }
 
-let searchButton = document.querySelector("#search-button");
-searchButton.addEventListener("click", updateCity);
+let searchButton = document.querySelector("#search-form");
+searchButton.addEventListener("submit", updateCity);
 
 let currentDate = new Date();
 displayDate(currentDate);
