@@ -1,0 +1,104 @@
+body {
+  background: #dbecda;
+  font-family: "roboto", sans-serif;
+}
+
+section {
+  background: #fff;
+  margin: 60px auto;
+  max-width: 600px;
+  padding: 30px;
+  border-radius: 30px;
+}
+
+a {
+  color: #01352c;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  border-color: #c1dfc4;
+  opacity: 0.2;
+}
+
+form {
+  margin: 30px 0 0;
+  padding: 0 0 30px;
+}
+
+input {
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+  height: 50px;
+}
+
+input.search-bar {
+  background-color: rgb(215, 232, 214);
+  width: 75%;
+}
+
+input.search-button {
+  width: 22%;
+  background-color: #01352c;
+  color: #fff;
+  margin-left: 5px;
+  transition: all 200ms ease-in-out;
+}
+
+input.search-button:hover {
+  background-color: #fff;
+  border: 1px solid #01352c;
+  color: #01352c;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 48px;
+  margin: 20px 0 10px;
+  font-weight: 500;
+}
+
+p.todays-details {
+  color: grey;
+  opacity: 0.8;
+  line-height: 1.8;
+}
+
+span.humidity-wind {
+  font-weight: 700;
+  color: #01352c;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.temp-details {
+  padding: 20px 0;
+}
+
+.temp-value {
+  font-size: 80px;
+  font-weight: 500;
+  padding: 0 0 0 10px;
+}
+
+.temp-icon {
+  font-size: 60px;
+  margin: 10 0;
+  position: relative;
+  top: -2px;
+}
+
+.temp-degree {
+  font-size: 28px;
+  position: relative;
+  top: -38px;
+}
