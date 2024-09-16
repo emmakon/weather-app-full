@@ -7,6 +7,35 @@ function updateCity(event) {
   heading.innerHTML = userInput;
 }
 
-let searchButton = document.querySelector("#search-button");
+function displayDate(date) {
+  let todayDate = document.querySelector("#date-details");
+  let hour = date.getHours();
+  let minutes = date.getMinutes();
 
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  let weekDays = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  let day = weekDays[date.getDay()];
+
+  todayDate.innerHTML = `${day} ${hour}:${minutes}`;
+}
+
+let searchButton = document.querySelector("#search-button");
 searchButton.addEventListener("click", updateCity);
+
+let currentDate = new Date();
+displayDate(currentDate);
