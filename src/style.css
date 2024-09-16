@@ -3,12 +3,13 @@ body {
   font-family: "roboto", sans-serif;
 }
 
-section {
+section.weather-app {
   background: #fff;
   margin: 60px auto;
   max-width: 600px;
   padding: 30px;
   border-radius: 30px;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
 }
 
 a {
