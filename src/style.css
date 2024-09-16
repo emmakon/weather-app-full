@@ -30,6 +30,12 @@ form {
   padding: 0 0 30px;
 }
 
+footer {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  text-align: center;
+}
+
 input {
   border: none;
   border-radius: 4px;
