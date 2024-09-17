@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
@@ -36,18 +37,17 @@
       </header>
       <main>
         <div class="city-details">
-          <h1>Paris</h1>
+          <h1 class="city">Paris</h1>
           <p class="todays-details">
-            <span id="date-details">Monday 11:57</span>, broken clouds<br />Humidity<span
-              id="humidity"
-              class="humidity-wind"
-            >
-              87%</span
-            >, Wind: <span id="wind" class="humidity-wind">6.17km/h</span>
+            <span id="date-details">Monday 11:57</span>,
+            <span id="weather-description">broken clouds</span><br />Humidity
+            <span id="humidity" class="humidity-wind">87%</span>, Wind:
+            <span id="wind" class="humidity-wind">6.17km/h</span>
           </p>
         </div>
         <div class="temp-details">
-          <span class="temp-icon">☀️</span><span class="temp-value">14</span
+          <span class="temp-icon">☀️</span
+          ><span class="temp-value" id="temp-values">14</span
           ><span class="temp-degree">°C</span>
         </div>
       </main>
