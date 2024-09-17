@@ -36,20 +36,23 @@
         <hr />
       </header>
       <main>
-        <div class="city-details">
-          <h1 id="city">Paris</h1>
-          <p class="todays-details">
-            <span id="time"></span>, <span id="weather-description"></span
-            ><br />Humidity <span id="humidity" class="humidity-wind"></span>,
-            Wind:
-            <span id="wind" class="humidity-wind"></span>
-          </p>
+        <div class="todays-full-details">
+          <div class="city-details">
+            <h1 id="city">Paris</h1>
+            <p class="todays-details">
+              <span id="time"></span>, <span id="weather-description"></span
+              ><br />Humidity <span id="humidity" class="humidity-wind"></span>,
+              Wind:
+              <span id="wind" class="humidity-wind"></span>
+            </p>
+          </div>
+          <div class="temp-details">
+            <div id="icon"></div>
+            <div class="temp-value" id="temp-values"></div>
+            <div class="temp-degree">°C</div>
+          </div>
         </div>
-        <div class="temp-details">
-          <div id="icon"></div>
-          <div class="temp-value" id="temp-values"></div>
-          <div class="temp-degree">°C</div>
-        </div>
+        <div class="weather-forecast" id="forecast"></div>
       </main>
       <hr />
       <footer>
