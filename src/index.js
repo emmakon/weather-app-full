@@ -20,6 +20,8 @@ function updateData(response) {
       src="${response.data.condition.icon_url}"
       class="temp-icon"
     />`;
+
+  getForecast(response.data.city);
 }
 
 function searchCity(city) {
@@ -33,6 +35,13 @@ function handleSearchSubmit(event) {
   let userInput = document.querySelector("#search-bar-input");
 
   searchCity(userInput.value);
+}
+
+function getForecast(city) {
+  let apiKey = "b532784o70betf374c9ae221b35afa9b";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function formatDate(date) {
@@ -58,7 +67,9 @@ function formatDate(date) {
   return `${day} ${hour}:${minutes}`;
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data);
+
   let forecastElement = document.querySelector("#forecast");
 
   let days = ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -87,4 +98,3 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Ottawa");
-displayForecast();
