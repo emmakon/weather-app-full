@@ -17,6 +17,10 @@ function updateData(response) {
   let newWind = response.data.wind.speed;
 
   wind.innerHTML = `${newWind}km/h`;
+
+  let timeElement = document.querySelector("#time");
+  let time = new Date(response.data.time * 1000);
+  timeElement.innerHTML = formatDate(time);
 }
 
 function searchCity(city) {
@@ -32,14 +36,10 @@ function handleSearchSubmit(event) {
   searchCity(userInput.value);
 }
 
-function displayDate(date) {
-  let todayDate = document.querySelector("#time");
+function formatDate(date) {
   let hour = date.getHours();
   let minutes = date.getMinutes();
 
-  if (hour < 10) {
-    hour = `0${hour}`;
-  }
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
@@ -56,13 +56,10 @@ function displayDate(date) {
 
   let day = weekDays[date.getDay()];
 
-  todayDate.innerHTML = `${day} ${hour}:${minutes}`;
+  return `${day} ${hour}:${minutes}`;
 }
 
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
-
-let currentDate = new Date();
-displayDate(currentDate);
 
 searchCity("Ottawa");
