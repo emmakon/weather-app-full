@@ -94,17 +94,19 @@ main {
 
 .temp-value {
   font-size: 88px;
-  margin-left: 10px;
   line-height: 88px;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 .temp-icon {
   width: 88px;
   height: 88px;
+  margin-right: -5px;
+  line-height: 88px;
 }
 
 .temp-degree {
   font-size: 28px;
   margin-top: 6px;
+  margin-left: -3px;
 }
