@@ -1,28 +1,21 @@
 function updateData(response) {
   let heading = document.querySelector("#city");
-  heading.innerHTML = response.data.city;
-
   let currentTemp = document.querySelector("#temp-values");
-  currentTemp.innerHTML = Math.round(response.data.temperature.current);
-
   let description = document.querySelector("#weather-description");
-  description.innerHTML = response.data.condition.description;
-
   let humidity = document.querySelector("#humidity");
   let newHumidity = response.data.temperature.humidity;
-
-  humidity.innerHTML = `${newHumidity}%`;
-
   let wind = document.querySelector("#wind");
   let newWind = response.data.wind.speed;
-
-  wind.innerHTML = `${newWind}km/h`;
-
   let timeElement = document.querySelector("#time");
   let time = new Date(response.data.time * 1000);
-  timeElement.innerHTML = formatDate(time);
-
   let iconElement = document.querySelector("#icon");
+
+  heading.innerHTML = response.data.city;
+  currentTemp.innerHTML = Math.round(response.data.temperature.current);
+  description.innerHTML = response.data.condition.description;
+  humidity.innerHTML = `${newHumidity}%`;
+  wind.innerHTML = `${newWind}km/h`;
+  timeElement.innerHTML = formatDate(time);
   iconElement.innerHTML = `<img
       src="${response.data.condition.icon_url}"
       class="temp-icon"
