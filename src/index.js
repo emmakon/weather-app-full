@@ -21,6 +21,12 @@ function updateData(response) {
   let timeElement = document.querySelector("#time");
   let time = new Date(response.data.time * 1000);
   timeElement.innerHTML = formatDate(time);
+
+  let iconElement = document.querySelector("#icon");
+  iconElement.innerHTML = `<img
+      src="${response.data.condition.icon_url}"
+      class="temp-icon"
+    />`;
 }
 
 function searchCity(city) {
