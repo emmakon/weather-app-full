@@ -1,5 +1,5 @@
 function updateData(response) {
-  let heading = document.querySelector("h1.city");
+  let heading = document.querySelector("#city");
   heading.innerHTML = response.data.city;
 
   let currentTemp = document.querySelector("#temp-values");
@@ -33,7 +33,7 @@ function handleSearchSubmit(event) {
 }
 
 function displayDate(date) {
-  let todayDate = document.querySelector("#date-details");
+  let todayDate = document.querySelector("#time");
   let hour = date.getHours();
   let minutes = date.getMinutes();
 
